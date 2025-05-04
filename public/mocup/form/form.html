@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiMIMI Formular</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">MiMIMI Formular</div>
+    <form>
+      <label>Name (Pseudonym erlaubt):
+        <input type="text" name="name" required>
+      </label>
+
+      <label>Datum des Ereignisses:
+        <input type="date" name="datum" required>
+      </label>
+
+      <label>Zeit:
+        <input type="time" name="zeit">
+      </label>
+
+      <label>Auf was basiert Ihr MiMiMi?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="basis" value="post"> Ein Post</label>
+        <label><input type="checkbox" name="basis" value="foto"> Ein Foto</label>
+        <label><input type="checkbox" id="basis-sonstiges" name="basis" value="sonstiges"> Sonstiges</label>
+        <div id="basis-sonstiges-text" class="hidden">
+          <textarea name="basis_sonstiges_text" rows="2" placeholder="Bitte beschreiben..."></textarea>
+        </div>
+      </div>
+
+      <label>Ihr MiMiMi kann wo eingeordnet werden?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="kategorie" value="religion"> Religion</label>
+        <label><input type="checkbox" name="kategorie" value="rassismus"> Rassismus</label>
+        <label><input type="checkbox" name="kategorie" value="fussball"> Fußball</label>
+        <label><input type="checkbox" name="kategorie" value="männermass"> Männermass</label>
+        <label><input type="checkbox" id="kategorie-sonstiges" name="kategorie" value="sonstiges"> Sonstiges</label>
+        <div id="kategorie-sonstiges-text" class="hidden">
+          <textarea name="kategorie_sonstiges_text" rows="2" placeholder="Bitte beschreiben..."></textarea>
+        </div>
+      </div>
+
+      <label>Wie laut war das innere Schreien? (1 = leises Seufzen, 10 = Nachbarschaft alarmiert)</label>
+      <input type="range" name="schreien" min="1" max="10">
+
+      <label>Welche Meme-Reaktion passt am besten?</label>
+      <select name="meme">
+        <option>Weinende Katze</option>
+        <option>Triggered.gif</option>
+        <option>Facepalm</option>
+        <option>Drama Queen</option>
+        <option>Andere (nicht dokumentiert)</option>
+      </select>
+
+      <label>Gab es Zeugen?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="zeugen_vorhanden" value="ja"> Ja</label>
+        <label><input type="radio" name="zeugen_vorhanden" value="nein"> Nein</label>
+        <label><input type="radio" name="zeugen_vorhanden" value="nein"> Vielleicht</label>
+      </div>
+
+      <label>Hat das MiMiMi Ihr Weltbild erschüttert?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="weltbild" value="ja"> Ja</label>
+        <label><input type="radio" name="weltbild" value="vielleicht"> Vielleicht</label>
+        <label><input type="radio" name="weltbild" value="kein_weltbild"> Es gab keins</label>
+      </div>
+
+      <label>Was erwarten Sie vom "Angreifer"?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="erwartung" value="entschuldigung"> Eine Entschuldigung</label>
+        <label><input type="checkbox" name="erwartung" value="kuchen"> Einen Kuchen</label>
+        <label><input type="checkbox" name="erwartung" value="exil"> Exil auf dem Mond</label>
+        <label><input type="checkbox" id="angreifer-sonstiges" name="erwartung" value="sonstiges"> Sonstiges</label>
+        <div id="angreifer-sonstiges-text" class="hidden">
+          <textarea name="angreifer_sonstiges_text" rows="2" placeholder="Bitte beschreiben..."></textarea>
+        </div>
+      </div>
+
+      <label>Was hätten Sie anders machen können?</label>
+      <textarea name="reflexion" rows="2"></textarea>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="reflexion" value="nö"> Nichts</label>
+      </div>
+
+      <label>Was haben Sie daraus gelernt?</label>
+      <textarea name="gelernt" rows="2"></textarea>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="reflexion" value="nö"> Nichts</label>
+      </div>
+
+      <label>Hat jemand applaudiert?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="applaus" value="ja"> Ja</label>
+        <label><input type="radio" name="applaus" value="nein"> Nein</label>
+        <label><input type="radio" name="applaus" value="keineahnung"> Keine Ahnung</label>
+      </div>
+
+
+      <label>Was war Ihr erster Impuls?</label>
+      <select name="impuls">
+        <option>Flucht</option>
+        <option>Angriff</option>
+        <option>Ironie</option>
+        <option>Ignorieren</option>
+      </select>
+
+      <label>Wählen Sie ein Tier, das Ihre innere Verletztheit verkörpert:</label>
+      <select name="tier">
+        <option>Koala</option>
+        <option>Waschbär</option>
+        <option>Dachs</option>
+        <option>Plüsch-Krake</option>
+        <option>Trauriger Pinguin</option>
+      </select>
+
+
+      <label>Letzte Worte zum Vorfall (optional, aber poetisch erwünscht):</label>
+      <textarea name="letzte_worte" rows="3"></textarea>
+
+      <label><input type="checkbox" required> Ich stimme der humorvollen Verarbeitung meiner Angaben zu.</label>
+      <label><input type="checkbox" required> Das Mimimi darf veröffentlicht werden</label>
+
+      <button type="submit">MiMiMi loslassen</button>
+      <p style="font-size: 0.9em; color: #555; margin-top: 20px;">
+        <strong>Hinweis:</strong> Dieses Formular ist satirisch-humorvoll gemeint und ersetzt keine psychologische Beratung oder therapeutische Unterstützung. Bei ernsthaften emotionalen Belastungen empfehlen wir professionelle Hilfe.
+      </p>
+    </form>
+  </div>
+
+  <script>
+    const basisCheckbox = document.getElementById('basis-sonstiges');
+    const basisTextbox = document.getElementById('basis-sonstiges-text');
+    basisCheckbox.addEventListener('change', () => {
+      basisTextbox.classList.toggle('hidden', !basisCheckbox.checked);
+    });
+
+    const kategorieCheckbox = document.getElementById('kategorie-sonstiges');
+    const kategorieTextbox = document.getElementById('kategorie-sonstiges-text');
+    kategorieCheckbox.addEventListener('change', () => {
+      kategorieTextbox.classList.toggle('hidden', !kategorieCheckbox.checked);
+    });
+
+    const angreiferCheckbox = document.getElementById('angreifer-sonstiges');
+    const angreiferTextbox = document.getElementById('angreifer-sonstiges-text');
+    angreiferCheckbox.addEventListener('change', () => {
+      angreiferTextbox.classList.toggle('hidden', !angreiferCheckbox.checked);
+    });
+  </script>
+</body>
+</html>

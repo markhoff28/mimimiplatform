@@ -1,0 +1,80 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #d0eaf5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  padding: 30px;
+}
+
+.header {
+  background-color: #111;
+  color: #00d4ff;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.checkbox-group,
+.radio-group {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  font-weight: normal;
+  display: block;
+  margin-top: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007ea7;
+}

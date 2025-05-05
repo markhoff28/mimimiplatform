@@ -83,7 +83,7 @@
 
 ## ⚠️ Lizenz & Disclaimer
 
-Dies ist ein satirisches Projekt mit technisch ernstem Anspruch. Kein echter Ersatz für psychologische Betreuung. Ironie erwünscht, Respekt bleibt Pflicht.
+Dies ist ein satirisches Projekt mit technisch ernstem Anspruch. Kein echter Ersatz für psychologische Betreuung. Meine das ernst. Ironie erwünscht, Respekt bleibt Pflicht.
 
 ---
 

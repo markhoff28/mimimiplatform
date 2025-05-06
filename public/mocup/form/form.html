@@ -27,8 +27,8 @@
       <div class="checkbox-group">
         <label><input type="checkbox" name="reason" value="post"> Ein Post</label>
         <label><input type="checkbox" name="reason" value="foto"> Ein Foto</label>
-        <label><input type="checkbox" id="basis-sonstiges" name="reason" value="sonstiges"> Sonstiges</label>
-        <div id="basis-sonstiges-text" class="hidden">
+        <label><input type="checkbox" id="basic-other" name="reason" value="sonstiges"> Sonstiges</label>
+        <div id="basic-other-text" class="hidden">
           <textarea name="reason_other_text" rows="2" placeholder="Bitte beschreiben..."></textarea>
         </div>
       </div>
@@ -39,8 +39,8 @@
         <label><input type="checkbox" name="category" value="rassismus"> Rassismus</label>
         <label><input type="checkbox" name="category" value="fussball"> Fußball</label>
         <label><input type="checkbox" name="category" value="menschenhass"> Menschenhass</label>
-        <label><input type="checkbox" id="kategorie-sonstiges" name="category" value="sonstiges"> Sonstiges</label>
-        <div id="kategorie-sonstiges-text" class="hidden">
+        <label><input type="checkbox" id="category-other" name="category" value="sonstiges"> Sonstiges</label>
+        <div id="category-other-text" class="hidden">
           <textarea name="category_other_text" rows="2" placeholder="Bitte beschreiben..."></textarea>
         </div>
       </div>
@@ -77,8 +77,8 @@
         <label><input type="checkbox" name="expectation" value="kuchen"> Einen Kuchen</label>
         <label><input type="checkbox" name="expectation" value="exil"> Exil auf dem Mond</label>
         <label><input type="checkbox" name="expectation" value="exil"> Nichts</label>
-        <label><input type="checkbox" id="angreifer-sonstiges" name="expectation" value="sonstiges"> Sonstiges</label>
-        <div id="angreifer-sonstiges-text" class="hidden">
+        <label><input type="checkbox" id="attacker-other" name="expectation" value="sonstiges"> Sonstiges</label>
+        <div id="attacker-other-text" class="hidden">
           <textarea name="angreifer_other_text" rows="2" placeholder="Bitte beschreiben..."></textarea>
         </div>
       </div>
@@ -136,22 +136,22 @@
   </div>
 
   <script>
-    const basisCheckbox = document.getElementById('basis-sonstiges');
-    const basisTextbox = document.getElementById('basis-sonstiges-text');
-    basisCheckbox.addEventListener('change', () => {
-      basisTextbox.classList.toggle('hidden', !basisCheckbox.checked);
+    const basicCheckbox = document.getElementById('basic-other');
+    const basicTextbox = document.getElementById('basic-other-text');
+    basicCheckbox.addEventListener('change', () => {
+      basicTextbox.classList.toggle('hidden', !basicCheckbox.checked);
     });
 
-    const kategorieCheckbox = document.getElementById('kategorie-sonstiges');
-    const kategorieTextbox = document.getElementById('kategorie-sonstiges-text');
-    kategorieCheckbox.addEventListener('change', () => {
-      kategorieTextbox.classList.toggle('hidden', !kategorieCheckbox.checked);
+    const categoryCheckbox = document.getElementById('category-other');
+    const categoryTextbox = document.getElementById('category-other-text');
+    categoryCheckbox.addEventListener('change', () => {
+      categoryTextbox.classList.toggle('hidden', !categoryCheckbox.checked);
     });
 
-    const angreiferCheckbox = document.getElementById('angreifer-sonstiges');
-    const angreiferTextbox = document.getElementById('angreifer-sonstiges-text');
-    angreiferCheckbox.addEventListener('change', () => {
-      angreiferTextbox.classList.toggle('hidden', !angreiferCheckbox.checked);
+    const attackerCheckbox = document.getElementById('attacker-other');
+    const attackerTextbox = document.getElementById('attacker-other-text');
+    attackerCheckbox.addEventListener('change', () => {
+      attackerTextbox.classList.toggle('hidden', !attackerCheckbox.checked);
     });
   </script>
 </body>

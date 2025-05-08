@@ -40,10 +40,10 @@ Diese Übersicht dokumentiert die geplanten API-Endpunkte für mimimiplatform. D
 
 | Methode | Endpoint                         | Beschreibung                         | Auth erforderlich |
 |---------|-----------------------------------|--------------------------------------|-------------------|
-| POST    | /api/mimimis/{id}/react          | Reaktion (z. B. +1 Mitleid)          | Optional          |
-| GET     | /api/mimimis/{id}/reactions      | Reaktionsübersicht                   | Nein              |
-| POST    | /api/mimimis/{id}/comments       | Kommentar hinzufügen                 | ✅ Ja             |
-| GET     | /api/mimimis/{id}/comments       | Kommentare anzeigen                  | Nein              |
+| POST    | /api/vi/mimimis/{id}/react          | Reaktion (z. B. +1 Mitleid)          | Optional          |
+| GET     | /api/vi/mimimis/{id}/reactions      | Reaktionsübersicht                   | Nein              |
+| POST    | /api/vi/mimimis/{id}/comments       | Kommentar hinzufügen                 | ✅ Ja             |
+| GET     | /api/vi/mimimis/{id}/comments       | Kommentare anzeigen                  | Nein              |
 
 ---
 

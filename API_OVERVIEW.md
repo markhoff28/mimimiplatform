@@ -8,10 +8,10 @@ Diese Übersicht dokumentiert die geplanten API-Endpunkte für mimimiplatform. D
 
 | Methode | Endpoint        | Beschreibung                   | Auth erforderlich |
 |---------|------------------|--------------------------------|-------------------|
-| POST    | /api/login       | Login via E-Mail & Passwort    | Nein              |
-| POST    | /api/register    | Registrierung                  | Nein              |
-| POST    | /api/logout      | Logout & Token löschen         | ✅ Ja             |
-| GET     | /api/user        | Aktueller User (Profil)        | ✅ Ja             |
+| POST    | /api/vi/login       | Login via E-Mail & Passwort    | Nein              |
+| POST    | /api/vi/register    | Registrierung                  | Nein              |
+| POST    | /api/vi/logout      | Logout & Token löschen         | ✅ Ja             |
+| GET     | /api/vi/user        | Aktueller User (Profil)        | ✅ Ja             |
 
 ---
 

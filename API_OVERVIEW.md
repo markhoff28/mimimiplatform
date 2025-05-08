@@ -51,8 +51,8 @@ Diese Übersicht dokumentiert die geplanten API-Endpunkte für mimimiplatform. D
 
 | Methode | Endpoint              | Beschreibung                      | Auth erforderlich |
 |---------|------------------------|-----------------------------------|-------------------|
-| GET     | /api/highlight         | Aktuelles "MiMiMi der Woche"     | Nein              |
-| GET     | /api/statistics        | MiMiMi-Statistik (optional)       | Nein              |
+| GET     | /api/vi/highlight         | Aktuelles "MiMiMi der Woche"     | Nein              |
+| GET     | /api/vi/statistics        | MiMiMi-Statistik (optional)       | Nein              |
 
 ---
 

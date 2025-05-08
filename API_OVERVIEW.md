@@ -19,9 +19,9 @@ Diese Übersicht dokumentiert die geplanten API-Endpunkte für mimimiplatform. D
 
 | Methode | Endpoint              | Beschreibung                         | Auth erforderlich |
 |---------|------------------------|--------------------------------------|-------------------|
-| POST    | /api/mimimis           | Neues MiMiMi einreichen              | Optional (Gast/Token) |
-| GET     | /api/mimimis           | Alle freigegebenen MiMiMis anzeigen | Nein              |
-| GET     | /api/mimimis/{id}      | Einzelnes MiMiMi anzeigen           | Nein              |
+| POST    | /api/vi/mimimis           | Neues MiMiMi einreichen              | Optional (Gast/Token) |
+| GET     | /api/vi/mimimis           | Alle freigegebenen MiMiMis anzeigen | Nein              |
+| GET     | /api/vi/mimimis/{id}      | Einzelnes MiMiMi anzeigen           | Nein              |
 
 ---
 
@@ -29,10 +29,10 @@ Diese Übersicht dokumentiert die geplanten API-Endpunkte für mimimiplatform. D
 
 | Methode | Endpoint                       | Beschreibung                          | Auth erforderlich |
 |---------|---------------------------------|---------------------------------------|-------------------|
-| GET     | /api/admin/mimimis             | Alle MiMiMis (auch nicht freigegeben) | ✅ Admin          |
-| POST    | /api/admin/mimimis/{id}/approve| MiMiMi freigeben                      | ✅ Admin          |
-| DELETE  | /api/admin/mimimis/{id}        | MiMiMi löschen                        | ✅ Admin          |
-| POST    | /api/admin/mimimis/{id}/highlight | Als „MiMiMi der Woche“ markieren  | ✅ Admin          |
+| GET     | /api/vi/admin/mimimis             | Alle MiMiMis (auch nicht freigegeben) | ✅ Admin          |
+| POST    | /api/vi/admin/mimimis/{id}/approve| MiMiMi freigeben                      | ✅ Admin          |
+| DELETE  | /api/vi/admin/mimimis/{id}        | MiMiMi löschen                        | ✅ Admin          |
+| POST    | /api/vi/admin/mimimis/{id}/highlight | Als „MiMiMi der Woche“ markieren  | ✅ Admin          |
 
 ---
 

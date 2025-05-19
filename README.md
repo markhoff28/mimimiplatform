@@ -23,7 +23,7 @@
 | Backend            | Laravel (PHP) oder C#        |
 | Datenbank          | PostgreSQL / MySQL           |
 | Authentifizierung  | Laravel Breeze               |
-| Adminbereich       | Laravel Nova (optional)      |
+| Adminbereich       | Standart Template (Laravel Nova (optional))      |
 | Frontend (MVP)     | Blade (klassisch, server-rendered) |
 | UI später          | Flutter (Mobile/Web/Desktop App)   |
 | Hosting            | Netcup / Hetzner / Forge     |

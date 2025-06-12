@@ -152,7 +152,8 @@
       </div>
 
       <label>Letzte Worte zum Vorfall (optional, aber poetisch erwünscht):</label>
-      <textarea name="last_words" rows="3"></textarea>
+      <textarea name="last_words" rows="3" id="letzte_worte" maxlength="512" oninput="updateCharCount()"></textarea>
+      <p id="charCount" style="font-size: 0.85em; color: #666; margin-top: 5px;">0 / 512 Zeichen</p>
 
       <label><input type="checkbox" required> Ich stimme der humorvollen Verarbeitung meiner Angaben zu.</label>
       <label><input type="checkbox"> Das Mimimi darf veröffentlicht werden</label>
@@ -182,6 +183,24 @@
     attackerCheckbox.addEventListener('change', () => {
       attackerTextbox.classList.toggle('hidden', !attackerCheckbox.checked);
     });
+
+    function updateCharCount() {
+      const textarea = document.getElementById("letzte_worte");
+      const counter = document.getElementById("charCount");
+      const length = textarea.value.length;
+      counter.textContent = `${length} / 512 Zeichen`;
+
+      if (length > 256 && length <= 512) {
+          counter.style.color = "#f57c00";
+          counter.textContent += " - Jetzt hör mal auf zu heulen!";
+      } else if (length > 512) {
+          counter.style.color = "#d32f2f";
+          textarea.value = textarea.value.slice(0, 512);
+          counter.textContent = "512 / 512 Zeichen - Das reicht jetzt!";
+      } else {
+        counter.style.color = "#666";
+      }
+    }
   </script>
 </body>
 </html>

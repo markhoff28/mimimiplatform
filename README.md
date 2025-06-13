@@ -3,7 +3,7 @@
 **mimimiplatform** ist eine satirisch-seriöse Webplattform für digitale Beschwerden, Jammerbeiträge und ironische Emotionalität. Nutzer reichen ihre "MiMiMis" über ein durchdachtes Formular ein, können anonym oder registriert teilnehmen, und werden Teil einer humorvollen, aber technisch sauberen Umgebung.
 
 ---
->Ein mögliches GPN23 Projekt?
+>Ein GPN23 Projekt
 
 ---
 
@@ -21,9 +21,9 @@
 | Komponente         | Technologie                  |
 |--------------------|------------------------------|
 | Backend            | Laravel (PHP) oder C#        |
-| Datenbank          | PostgreSQL / MySQL           |
+| Datenbank          | MySQL           |
 | Authentifizierung  | Laravel Breeze               |
-| Adminbereich       | Laravel Nova (optional)      |
+| Adminbereich       | Standart Template (Laravel Nova (optional))      |
 | Frontend (MVP)     | Blade (klassisch, server-rendered) |
 | UI später          | Flutter (Mobile/Web/Desktop App)   |
 | Hosting            | Netcup / Hetzner / Forge     |
@@ -83,7 +83,7 @@
 
 ## ⚠️ Lizenz & Disclaimer
 
-Dies ist ein satirisches Projekt mit technisch ernstem Anspruch. Kein echter Ersatz für psychologische Betreuung. Meine das ernst. Ironie erwünscht, Respekt bleibt Pflicht.
+Dies ist ein satirisches Projekt mit technisch ernstem Anspruch. Kein echter Ersatz für psychologische Betreuung. Meine das ernst. Ironie erwünscht, Respekt bleibt Pflicht. Und nutze bitte keine Namen!!!
 
 ---
 

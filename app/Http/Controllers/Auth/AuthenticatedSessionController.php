@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Models\User;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -28,7 +29,25 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        $url = '';
+        if($request->user()->role === 'admin'){
+            $url = '/backoffice/dashboard';
+        } 
+        // if you had another roles put it here
+        elseif($request->user()->role === 'user'){
+            $url = '/dashboard';
+        }
+
+        $id = Auth::user()->id;
+        $adminData = User::find($id);
+        $username = $adminData->name;
+
+        $notification = array(
+            'message' => 'User ' . $username . ' Login Successfully',
+            'alert-type' => 'info'
+        );
+
+        return redirect()->intended($url)->with($notification);
     }
 
     /**

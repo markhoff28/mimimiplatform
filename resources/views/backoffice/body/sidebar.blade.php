@@ -4,7 +4,7 @@
       <img src="{{ asset('backoffice/assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
     </div>
     <div>
-      <h4 class="logo-text">TheTriumvirat</h4>
+      <h4 class="logo-text">MiMiMi</h4>
     </div>
     <div class="toggle-icon ms-auto"><i class='bx bx-arrow-back'></i>
     </div>
@@ -41,18 +41,18 @@
     <li class="menu-label">Marketing and Social Media</li>
     @if (Auth::user()->can('account.link.menu'))
     <li>
-      <a class="has-arrow" href="{{ route('accountlinks.index') }}">
+      <a class="has-arrow" href="#">
         <div class="parent-icon"><i class='bx bx-link-external'></i>
         </div>
         <div class="menu-title">Account Links</div>
       </a>
       <ul>
         @if (Auth::user()->can('account.link.all'))
-        <li> <a href="{{ route('accountlinks.index') }}"><i class='bx bx-radio-circle'></i>All Account Links</a>
+        <li> <a href="#"><i class='bx bx-radio-circle'></i>All Account Links</a>
         </li>
         @endif
         @if (Auth::user()->can('account.link.add'))
-        <li> <a href="{{ route('accountlinks.create') }}"><i class='bx bx-radio-circle'></i>Add Account Link</a>
+        <li> <a href="#"><i class='bx bx-radio-circle'></i>Add Account Link</a>
         </li>
         @endif
       </ul>
@@ -61,14 +61,14 @@
     @endif
     @if (Auth::user()->can('marketing.seo'))
     <li>
-      <a class="has-arrow" href="{{ route('seo.index') }}">
+      <a class="has-arrow" href="#">
         <div class="parent-icon"><i class='bx bx-flag'></i>
         </div>
         <div class="menu-title">SEO</div>
       </a>
       <ul>
         @if (Auth::user()->can('marketing.seo'))
-        <li> <a href="{{ route('seo.index') }}"><i class='bx bx-radio-circle'></i>Meta Settings</a>
+        <li> <a href="#"><i class='bx bx-radio-circle'></i>Meta Settings</a>
         </li>
         @endif
       </ul>
@@ -87,11 +87,11 @@
       </a>
       <ul>
         @if (Auth::user()->can('setting.smtp'))
-        <li> <a href="{{ route('setting.smtp') }}"><i class='bx bx-radio-circle'></i>Mail</a>
+        <li> <a href="#}"><i class='bx bx-radio-circle'></i>Mail</a>
         </li>
         @endif
         @if (Auth::user()->can('setting.site'))
-        <li> <a href="{{ route('setting.site') }}"><i class='bx bx-radio-circle'></i>Site</a>
+        <li> <a href="}"><i class='bx bx-radio-circle'></i>Site</a>
         </li>
         @endif
       </ul>

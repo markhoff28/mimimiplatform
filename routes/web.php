@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Backoffice\BackofficeController;
 
+use App\Http\Controllers\Backoffice\Setting\SiteController;
+use App\Http\Controllers\Backoffice\Setting\SmtpController;
+
 use App\Http\Controllers\Backoffice\Usermanagement\AdminUserController;
 use App\Http\Controllers\Backoffice\Usermanagement\PermissionController;
 use App\Http\Controllers\Backoffice\Usermanagement\RoleController;
@@ -46,6 +49,23 @@ Route::middleware(['auth', 'role:admin'])
         Route::get('/change/password', [BackofficeChangePasswordController::class, 'backofficeChangePassword'])->name('backoffice.change.password');
         Route::post('/password/update', [BackofficeChangePasswordController::class, 'backofficePasswordUpdate'])->name('backoffice.password.update');
 
+        // Settings:
+        // Backoffice SMTP Setting Route 
+        Route::prefix('/settings/smtp')
+            ->controller(SmtpController::class)
+            ->group(function () {
+                Route::get('/', 'smtpSetting')->name('setting.smtp')->middleware('permission:setting.smtp');
+                Route::post('/update', 'smtpUpdate')->name('setting.smtp.update')->middleware('permission:setting.smtp');
+            });
+
+        // Backoffice Site Setting  All Route 
+        Route::prefix('/settings/site')
+            ->controller(SiteController::class)
+            ->group(function () {
+                Route::get('/', 'siteSetting')->name('setting.site')->middleware('permission:setting.site');
+                Route::post('/', 'siteUpdate')->name('setting.site.update')->middleware('permission:setting.site');
+            });
+        
         /// Permission All Route 
         Route::prefix('/permission')
             ->controller(PermissionController::class)

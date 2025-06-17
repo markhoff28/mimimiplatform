@@ -87,11 +87,11 @@
       </a>
       <ul>
         @if (Auth::user()->can('setting.smtp'))
-        <li> <a href="#}"><i class='bx bx-radio-circle'></i>Mail</a>
+        <li> <a href="{{ route('setting.smtp') }}"><i class='bx bx-radio-circle'></i>Mail</a>
         </li>
         @endif
         @if (Auth::user()->can('setting.site'))
-        <li> <a href="}"><i class='bx bx-radio-circle'></i>Site</a>
+        <li> <a href="{{ route('setting.site') }}"><i class='bx bx-radio-circle'></i>Site</a>
         </li>
         @endif
       </ul>

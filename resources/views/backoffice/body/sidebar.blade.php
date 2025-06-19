@@ -61,14 +61,14 @@
     @endif
     @if (Auth::user()->can('marketing.seo'))
     <li>
-      <a class="has-arrow" href="#">
+      <a class="has-arrow" href="{{ route('seo.index') }}">
         <div class="parent-icon"><i class='bx bx-flag'></i>
         </div>
         <div class="menu-title">SEO</div>
       </a>
       <ul>
         @if (Auth::user()->can('marketing.seo'))
-        <li> <a href="#"><i class='bx bx-radio-circle'></i>Meta Settings</a>
+        <li> <a href="{{ route('seo.index') }}"><i class='bx bx-radio-circle'></i>Meta Settings</a>
         </li>
         @endif
       </ul>

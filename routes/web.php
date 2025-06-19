@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Backoffice\BackofficeController;
 
+use App\Http\Controllers\Backoffice\Marketing\SeoController;
+
 use App\Http\Controllers\Backoffice\Setting\SiteController;
 use App\Http\Controllers\Backoffice\Setting\SmtpController;
 
@@ -48,6 +50,15 @@ Route::middleware(['auth', 'role:admin'])
         // Backoffice User update password
         Route::get('/change/password', [BackofficeChangePasswordController::class, 'backofficeChangePassword'])->name('backoffice.change.password');
         Route::post('/password/update', [BackofficeChangePasswordController::class, 'backofficePasswordUpdate'])->name('backoffice.password.update');
+
+        // Marketing
+        // Site Seo All Route 
+        Route::prefix('/marketing/seo')
+            ->controller(SeoController::class)
+            ->group(function () {
+                Route::get('/', 'index')->name('seo.index')->middleware('permission:marketing.seo');
+                Route::post('/update', 'update')->name('seo.update')->middleware('permission:marketing.seo');
+            });
 
         // Settings:
         // Backoffice SMTP Setting Route 

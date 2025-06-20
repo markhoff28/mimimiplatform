@@ -1,5 +1,5 @@
 @section('title')
-All MiMiMi Category
+Add MiMiMi Category
 @endsection
 
 @extends('backoffice.backoffice')

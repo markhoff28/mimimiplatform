@@ -37,6 +37,22 @@
       </a>
     </li>
 
+    <li>
+      <a class="has-arrow" href="{{ route('mimimi.category.index') }}">
+        <div class="parent-icon"><i class='bx bx-category'></i>
+        </div>
+        <div class="menu-title">MiMiMi Category</div>
+      </a>
+      <ul>
+        
+        <li> <a href="{{ route('mimimi.category.index') }}"><i class='bx bx-radio-circle'></i>All Category</a>
+        </li>
+        
+        <li> <a href="{{ route('mimimi.category.create') }}"><i class='bx bx-radio-circle'></i>Add Category</a>
+        </li>
+        
+      </ul>
+
     @if (Auth::user()->can('socal.media.user'))
     <li class="menu-label">Marketing and Social Media</li>
     @if (Auth::user()->can('account.link.menu'))

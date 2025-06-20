@@ -7,6 +7,8 @@ use App\Http\Controllers\Backoffice\BackofficeController;
 
 use App\Http\Controllers\Backoffice\Marketing\SeoController;
 
+use App\Http\Controllers\Backoffice\Mimimi\CategoryController;
+
 use App\Http\Controllers\Backoffice\Setting\SiteController;
 use App\Http\Controllers\Backoffice\Setting\SmtpController;
 
@@ -60,6 +62,17 @@ Route::middleware(['auth', 'role:admin'])
                 Route::post('/update', 'update')->name('seo.update')->middleware('permission:marketing.seo');
             });
 
+        // MiMiMi Category All Route 
+        Route::prefix('/mimimi/category')
+            ->controller(CategoryController::class)
+            ->group(function () {
+                Route::get('/', 'index')->name('mimimi.category.index');
+                Route::get('/create', 'create')->name('mimimi.category.create');
+                Route::post('/', 'store')->name('mimimi.category.store');
+                Route::get('/edit/{id}', 'edit')->name('mimimi.category.edit');
+                Route::post('/update', 'update')->name('mimimi.category.update');
+                Route::get('/delete/{id}', 'destroy')->name('mimimi.category.destroy');
+            });
         // Settings:
         // Backoffice SMTP Setting Route 
         Route::prefix('/settings/smtp')
